@@ -2,18 +2,17 @@
 <html>
 <head>
   <title>Virtual Pet</title>
-  <style>
-    #game { margin-top: 20px; }
-    .pet { width: 200px; cursor: pointer; }
-  </style>
+  
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
-  <h1>🐶 🐈 Pet Clicker Game</h1>
+  <h1>🐶 🐈 🐰🐦 Clicker Game</h1>
   <p>pick your pet</p>
   <button onclick="choosePet('dog')">Dog</button>
   <button onclick="choosePet('cat')">Cat</button>
+  <button onclick="choosePet('bunny')">Bunny</button>
+  <button onclick="choosePet('Bird')">Bird</button>
 
   <div id="game" style="display: none;">
     <img id="petImage" class="pet" src="" alt="pet" onclick="playWithPet()" />
@@ -41,21 +40,23 @@
         showFunActions(this.name);
       }
     }
-
-    let currentPet = null;
-
     function choosePet(type) {
-      if (type === 'dog') {
-        currentPet = new Pet('Dog', 'Woof! 🐶', 'img/image.png');
-      } else {
+        if (type === 'Dog') {
         currentPet = new Pet('Cat', 'Meow! 🐱', 'img/image copy.png');
+      } else if (type === 'Dog') {
+        currentPet = new Pet('dog', 'Woof! 🐶', 'img/image.png');
       }
-
+      if (type === 'bunny') {
+        currentPet = new Pet('bunny', 'que! 🐰','img/image copy 3.png' );
+      } else {
+        currentPet = new Pet('bird', 'noo! 🐦', 'img/image copy 2.png');
+      
+      }
       document.getElementById('petImage').src = currentPet.image;
       document.getElementById('game').style.display = 'block';
       updateCounter(0);
       showFunActions(currentPet.name);
-    }
+      }
 
     function playWithPet() {
       if (currentPet) {
