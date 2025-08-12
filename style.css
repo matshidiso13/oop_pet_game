@@ -1,14 +1,16 @@
 body {
     font-family: Arial, sans-serif;
-    background: antiquewhite;
+    background: plum;
     text-align: center;
-    padding: 30px;
+    padding: 100px;
   }
 
   h1 {
-    color: brown;
+    color: aquamarine;
   }
+button {background-color: aquamarine;
 
+}
   
   .pet {
     width: 200px;
@@ -18,6 +20,7 @@ body {
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: transform 0.2s;
+    padding-top: 100px;
   }
 
   .pet:hover {
@@ -38,5 +41,11 @@ body {
 
   #actions {
     margin-top: 20px;
+  }
+  nav {background-color: aqua;
+    padding: 20px;
+    text-align: center;
+    word-spacing: 90px;
+
   }
   
